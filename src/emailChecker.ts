@@ -6,9 +6,9 @@ function isValidEmail(email: string): boolean{
 
     if(email.includes(" ")) return false;
 
-    const espaceRegex = /^.+@.+$/;
+    const spaceRegex = /^.+@.+$/;
 
-    if(!espaceRegex.test(email)) return false;
+    if(!spaceRegex.test(email)) return false;
 
     return true;
 }
