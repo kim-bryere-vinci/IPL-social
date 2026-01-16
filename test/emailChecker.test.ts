@@ -1,12 +1,12 @@
 import {isValidEmail} from "../src/emailChecker"
 
 describe("email checker", () => {
-    test("it should exactly one @", () => {
+    test("it should have exactly one @", () => {
         expect(isValidEmail("kim.bryerestudent.vinci.be")).toBe(false);
         expect(isValidEmail("kim.bryerest@@@udent.vinci.be")).toBe(false);
     }),
 
-    test("it should at least contain an '.' in name of the domain name", () => {
+    test("it should have at least contain an '.' in name of the domain name", () => {
         expect(isValidEmail("kimbryerestudentvincibe")).toBe(false);
         expect(isValidEmail("kimbryerestudentvinci...be")).toBe(false);
         expect(isValidEmail("kimbryerestudentvinci...be.")).toBe(false);
