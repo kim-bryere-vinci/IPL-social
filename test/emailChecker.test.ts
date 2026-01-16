@@ -9,6 +9,7 @@ describe("email checker", () => {
     test("Il doit contenir au moins un point dans le nom de domaine", () => {
         expect(isValidEmail("kimbryerestudentvincibe")).toBe(false);
         expect(isValidEmail("kimbryerestudentvinci...be")).toBe(false);
+        expect(isValidEmail("kimbryerestudentvinci...be.")).toBe(false);
     }),
 
     test("Il ne peut contenir aucun espace", () => {
@@ -17,6 +18,8 @@ describe("email checker", () => {
 
     test("Il doit avoir du texte avant et après le @", () => {
         expect(isValidEmail("@")).toBe(false);
+        expect(isValidEmail("@deaddd.be")).toBe(false);
+        expect(isValidEmail("dafzrafgzar@")).toBe(false);
     }),
 
     test("email valide ", () => {
