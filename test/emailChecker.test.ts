@@ -12,4 +12,8 @@ describe("email checker", () => {
     test("Il ne peut contenir aucun espace", () => {
         expect(isValidEmail("kimbryerestudentvi    ncibe")).toBe(false);
     }),
+
+    test("Il doit avoir du texte avant et après le @", () => {
+        expect(isValidEmail("@")).toBe(false);
+    }),
 })
