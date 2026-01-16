@@ -1,19 +1,34 @@
 # IPL social
 
-## Étudiant
-Nom : BRYERE 
-Prénom : Kim
-Email Vinci : kim.bryere@student.vinci.be
+## student
+Last name : BRYERE
+First name : Kim
+Vinci email : kim.bryere@student.vinci.be
 
-URL GitHub : https://github.com/kim-bryere-vinci/IPL-social
+Github URL : https://github.com/kim-bryere-vinci/IPL-social
 
 ## Description
-Ce projet permet la validation d'email en TS, via une approche TDD
-La fonction doit vérifier qu’une chaine de caractère est bien une adresse email valide :
-  -  Il doit contenir au moins un @
-  -  Il doit contenir au moins un point dans le nom de domaine (et pas le dernier caractère
-  -  Il ne peut contenir aucun espace
-  -  Il doit avoir du texte avant et après le @
+This Project provide email validation in TypeScript using a TDD approach. 
+The function must verify that a string is a valid email address: 
 
-## Lancer les tests
+    - It should have exactly one @
+    - It should at least contain an '.' in name of the domain name
+    - It should not contain any space
+    - It should have text before and after '@'
+
+## Run tests 
 npm test
+
+## Architecture
+
+The project is organized as follows: 
+
+- 'src/' : contains the TypeScript source code
+    - 'emailChecker.ts' : implementation of the email validation function
+- 'tests/' : contains unit tests written with jest
+    - 'emailChecker.test.ts' : TDD tests for the validation function
+ 
+- 'jest.config.js' : configuration file for jest and ts-jest
+- 'tsconfig.json' : TypeScript compiler configurations
+-  ' package.json' : project dependencies and scripts
+ 
