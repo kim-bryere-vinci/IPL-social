@@ -16,4 +16,9 @@ describe("email checker", () => {
     test("Il doit avoir du texte avant et après le @", () => {
         expect(isValidEmail("@")).toBe(false);
     }),
+
+    test("email valide ", () => {
+        expect(isValidEmail("kim.bryere@student.vinci.be")).toBe(true);
+        expect(isValidEmail("kim.bryere@gmail.be")).toBe(true)
+    })
 })
